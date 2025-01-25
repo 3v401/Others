@@ -19,5 +19,7 @@ npm -v
 
 ### Development of a CRU database with Node.js
 
-1. In your VisualStudio code path execute: `npm init -y`
-2. The following packages are needed: `node i express`
+1. Initialize a new Node.js project: `npm init -y`
+2. Install MongoDB: `npm install mongodb`
+3. The following packages are needed: `node i express nodemon -D`
+4. To connect a MongoDB database to our Node.js backend an account is required.
