@@ -23,3 +23,7 @@ npm -v
 2. Install MongoDB: `npm install mongodb`
 3. The following packages are needed: `node i express nodemon -D`
 4. To connect a MongoDB database to our Node.js backend an account is required.
+5. To connect to the MongoDB database run:
+```
+mongodb+srv://<username>:<db_password>@cluster0.emyfy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+```
