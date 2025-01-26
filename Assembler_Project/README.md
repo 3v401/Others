@@ -1,27 +1,17 @@
-# Project: 4 in a row.
+## Project: Four in a row.
 
-This project aims to show how high-level C code interacts with low-level `x86_64` architecture assembly language. This project is more than just a game, it is a hands-on dive into the gap between software and hardware. This project simulates 4 in a Row with a CMD interface alternating between C and assembly subroutines.
+This project aims to show how high-level C code interacts with low-level `x86_64` architecture assembly language. It provides a "hands-on" exploration into the gap between software and hardware by simulating Connect 4 game with a CMD interface alternating between C and assembly subroutines. The `C` code provides functional high-level implementation of the game logic meanwhile assembly code mimics the C logic at a low-level interacting with CPU instructions, memory management and control flow.
 
-1. C Implementation: Provides functional high-level implementation of the game logic.
-2. Assembly Implementation: Mimics the C logic implementation at a lower level interacting with CPU instructions, memory management and control flow.
-
-This project was done for the subject "Computer Architecture" to:
+This project was done for the subject "**Computer Architecture**" to:
 
 1. Understand Data Flow, I/O control flow.
 2. Memory management (Use relative and indexed addressing to interact with matrices and arrays in memory).
-3. CMD interaction.
-4. Gain experience in low-level programming, debugging and Assembly code.
+3. Learn CMD interaction.
+4. Gain experience in low-level programming, debugging and assembly code.
 
-This project asks the student to define the low-level subroutines in Assembly mimicking the C subroutines defined in the `Part1.c` file used as guidance. 
+### Part 1: Core Functionality:
 
-#### Part 1: Core Functionality:
-
-The main objectives of part one include:
-
-1. Dropping discs into columns with gravity.
-2. Checking if the board is full.
-
-For part one the student must define:
+For part one the student must define the following subroutines:
 
 1. calcIndexP1
 2. updateBoardP1
@@ -30,9 +20,9 @@ For part one the student must define:
 5. insertDiscP1
 6. checkEndP1
 
-#### Part 2: Winning condition:
+### Part 2: Winning condition:
 
-Part two of the project extends functionality to detect a winner by checking for 4 connected discs in horizontal, vertical, or diagonal lines. The subroutine to define is:
+Part two of the project extends functionality to detect a winner by checking for 4 connected discs in horizontal, vertical, or diagonal lines. The subroutines to define are:
 
 1. calcIndexP2
 2. updateBoardP2
@@ -42,7 +32,7 @@ Part two of the project extends functionality to detect a winner by checking for
 6. checkLineP2
 7. checkEndP2
 
-##### Test the implementation
+### Test the implementation
 
 To test the implementation in Assembly comment out the corresponding C Function. For example in `Part1.c` file go to Line 630, comment out `calcIndexP1();` and comment `calcIndexP1_C();`. This will activate your Assembly implementation and comment the C implementation. It should look something like this:
 
