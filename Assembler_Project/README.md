@@ -34,7 +34,7 @@ Part two of the project extends functionality to detect a winner by checking for
 
 ### Test the implementation
 
-To test the implementation in Assembly comment out the corresponding C Function. For example in `Part1.c` file go to Line 630, comment out `calcIndexP1();` and comment `calcIndexP1_C();`. This will activate your Assembly implementation and comment the C implementation. It should look something like this:
+To test the implementation in assembly comment the corresponding C subroutine call. For example, in `Part1.c`, go to Line 630, uncomment `calcIndexP1();` and comment `calcIndexP1_C();`. This will call the assembly implementation and not the C implementation. It should look something like this:
 
 ```
         //=======================================================
@@ -43,9 +43,11 @@ To test the implementation in Assembly comment out the corresponding C Function.
         //=======================================================
 ```
 
-#### Running the program
+This can be done with every subroutine.
 
-To execute the program we need to know first what is a compiler. A compiler is a program that translates high-level programming code (C, Python...) into machine code (binary or assembly) that the computer hardware can understand and execute. This tool converts human-readable code into executable programs.
+### Running the program
+
+To execute the program we need a compiler. A compiler is a program that translates high-level programming code (C, Python...) into machine code (binary or assembly) that the computer hardware can understand and execute. This tool converts human-readable code (C) into executable programs.
 
 ##### Types of Compilers
 
