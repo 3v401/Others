@@ -30,7 +30,9 @@ For part one the student must define:
 
 #### Part 2: Winning condition:
 
+Part two of the project extends functionality to detect a winner by checking for 4 connected discs in horizontal, vertical, or diagonal lines. The subroutine to define is:
 
+1. checkLineP2
 
 ##### Test the implementation
 
