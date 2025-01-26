@@ -51,12 +51,6 @@ To test the implementation in Assembly comment out the corresponding C Function.
 
 #### Running the program
 
-To run the program you first need to compile it. To compile you need a compatible compiler to build the program. Run:
-
-```
-gcc -o game Part1.c Part1_Assembler.o
-```
-
 To execute the program we need to know first what is a compiler. A compiler is a program that translates high-level programming code (C, Python...) into machine code (binary or assembly) that the computer hardware can understand and execute. This tool converts human-readable code into executable programs.
 
 ##### Types of Compilers
@@ -84,3 +78,13 @@ This command compiles the assembly code into a 64-bit object file ready for link
 ```
 gcc -no-pie -mincoming-stack-boundary=3 -g -o Part1 Part1_Assembler.o Part1.c
 ```
+
+1. `gcc`: GNU C Compiler used to compile and link the program
+2. `-no-pie`: Disables Position Independent Executable (PIE) format to ensure fixed memory addresses for easier debugging.
+3. `-mincoming-stack-boundary=3`: Specifies the stack alignment to 8 bytes (2^3) to match the stack alignment used in the assembly code.
+4. `-g`: Includes debugging information
+5. `-o Part2`: Output executable name
+6. `Part2_Assembler.o`: Object file generated from the assembly code
+7. `Part2.c`: The C source file to compile and link with the assembly code.
+
+8. This command links the assembly object file (`Part2_Assembler.o`) and the C code (`Part2.c`) into a single executable (`Part2`) with debugging information.
