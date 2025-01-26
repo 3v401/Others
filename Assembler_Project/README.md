@@ -73,10 +73,12 @@ yasm -f elf64 -g dwarf2 Part2_Assembler.asm
 3. `-g dwarf2`: Include debugging information in DWARF2 format.
 4. `Part2_Assembler.asm`: The input assembly to be compiled.
 
+(pic1)
+
 This command compiles the assembly code into a 64-bit object file ready for linking (`Part2_Assembler.o`). Then execute:
 
 ```
-gcc -no-pie -mincoming-stack-boundary=3 -g -o Part1 Part1_Assembler.o Part1.c
+gcc -no-pie -mincoming-stack-boundary=3 -g -o Part2 Part2_Assembler.o Part2.c
 ```
 
 1. `gcc`: GNU C Compiler used to compile and link the program
@@ -87,4 +89,11 @@ gcc -no-pie -mincoming-stack-boundary=3 -g -o Part1 Part1_Assembler.o Part1.c
 6. `Part2_Assembler.o`: Object file generated from the assembly code
 7. `Part2.c`: The C source file to compile and link with the assembly code.
 
-8. This command links the assembly object file (`Part2_Assembler.o`) and the C code (`Part2.c`) into a single executable (`Part2`) with debugging information.
+(pic2)
+
+8. This command links the assembly object file (`Part2_Assembler.o`) and the C code (`Part2.c`) into a single executable (`Part2`) with debugging information. Execute the output file with `./Part2`
+
+(pic3)
+
+You can start playing!
+
