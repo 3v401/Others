@@ -25,14 +25,18 @@ For part one the student must define:
 
 1. calcIndexP1
 2. updateBoard P1
-3. moveCursorP1
-4. checkEndP1
+3. showDiscPosP1
+4. moveCursorP1
+5. insertDiscP1
+6. checkEndP1
 
 #### Part 2: Winning condition:
 
 Part two of the project extends functionality to detect a winner by checking for 4 connected discs in horizontal, vertical, or diagonal lines. The subroutine to define is:
 
-1. checkLineP2
+1. calcIndexP2
+2. updateBoardP2
+3. checkLineP2
 
 ##### Test the implementation
 
