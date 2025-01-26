@@ -97,3 +97,10 @@ gcc -no-pie -mincoming-stack-boundary=3 -g -o Part2 Part2_Assembler.o Part2.c
 
 You can start playing!
 
+(pic4)
+
+Keep playing until one of them wins!
+
+(pic5)
+
+Player 2 (circles) won!
