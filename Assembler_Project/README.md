@@ -56,3 +56,31 @@ To run the program you first need to compile it. To compile you need a compatibl
 ```
 gcc -o game Part1.c Part1_Assembler.o
 ```
+
+To execute the program we need to know first what is a compiler. A compiler is a program that translates high-level programming code (C, Python...) into machine code (binary or assembly) that the computer hardware can understand and execute. This tool converts human-readable code into executable programs.
+
+##### Types of Compilers
+
+1. Native Compilers: Converts high-level code into machine code for the same system it runs on (GCC, Clang, MSVC)
+2. Cross Compilers: Generates code for a platform other than the one it is running on (ARM GCC, MinGW, XC16 Compiler).
+3. Just-In-Time (JIT) Compiler: Translates code at runtime for execution (Java HotSpot JVM, V8, LLVM JIT)
+4. Interpreting Compiler: Compiles and executes code line-by-line (Python interpreter, Ruby MRI, Perl Interpreter)
+
+In our example we will use GCC (GNU Compiler Collection) that compiles C code and links it with the assembler code to create an executable. It ensures the C and assembly codes work together.
+
+To run the program execute:
+
+```
+yasm -f elf64 -g dwarf2 Part2_Assembler.asm
+```
+
+1. `yasm`: Assembler used to translate the assembly code into object file.
+2. `-f elf64`: Specifies the output format (Executable and Linkable Format for 64-bit).
+3. `-g dwarf2`: Include debugging information in DWARF2 format.
+4. `Part2_Assembler.asm`: The input assembly to be compiled.
+
+This command compiles the assembly code into a 64-bit object file ready for linking (`Part2_Assembler.o`). Then execute:
+
+```
+gcc -no-pie -mincoming-stack-boundary=3 -g -o Part1 Part1_Assembler.o Part1.c
+```
