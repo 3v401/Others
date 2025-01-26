@@ -1,4 +1,4 @@
-### Project: 4 in a row.
+# Project: 4 in a row.
 
 This project aims to show how high-level C code interacts with low-level `x86_64` architecture assembly language. This project is more than just a game, it is a hands-on dive into the gap between software and hardware. This project simulates 4 in a Row with a CMD interface alternating between C and assembly subroutines.
 
@@ -24,7 +24,7 @@ The main objectives of part one include:
 For part one the student must define:
 
 1. calcIndexP1
-2. updateBoard P1
+2. updateBoardP1
 3. showDiscPosP1
 4. moveCursorP1
 5. insertDiscP1
@@ -36,7 +36,11 @@ Part two of the project extends functionality to detect a winner by checking for
 
 1. calcIndexP2
 2. updateBoardP2
-3. checkLineP2
+3. showDiscPosP2
+4. moveCursorP2
+5. insertDiscP2
+6. checkLineP2
+7. checkEndP2
 
 ##### Test the implementation
 
@@ -73,7 +77,7 @@ yasm -f elf64 -g dwarf2 Part2_Assembler.asm
 3. `-g dwarf2`: Include debugging information in DWARF2 format.
 4. `Part2_Assembler.asm`: The input assembly to be compiled.
 
-(pic1)
+![alt text](pics/pic1.png)
 
 This command compiles the assembly code into a 64-bit object file ready for linking (`Part2_Assembler.o`). Then execute:
 
@@ -89,18 +93,18 @@ gcc -no-pie -mincoming-stack-boundary=3 -g -o Part2 Part2_Assembler.o Part2.c
 6. `Part2_Assembler.o`: Object file generated from the assembly code
 7. `Part2.c`: The C source file to compile and link with the assembly code.
 
-(pic2)
+![alt text](pics/pic2.png)
 
 8. This command links the assembly object file (`Part2_Assembler.o`) and the C code (`Part2.c`) into a single executable (`Part2`) with debugging information. Execute the output file with `./Part2`
 
-(pic3)
+![alt text](pics/pic3.png)
 
 You can start playing!
 
-(pic4)
+![alt text](pics/pic4.png)
 
 Keep playing until one of them wins!
 
-(pic5)
+![alt text](pics/pic5.png)
 
-Player 2 (circles) won!
+🥳 Player 2 (circles) won! 🥳
