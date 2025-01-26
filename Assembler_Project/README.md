@@ -1,4 +1,4 @@
-## Project: Four in a row.
+## Project: Connect 4.
 
 This project aims to show how high-level C code interacts with low-level `x86_64` architecture assembly language. It provides a "hands-on" exploration into the gap between software and hardware by simulating Connect 4 game with a CMD interface alternating between C and assembly subroutines. The `C` code provides functional high-level implementation of the game logic meanwhile assembly code mimics the C logic at a low-level interacting with CPU instructions, memory management and control flow.
 
@@ -51,12 +51,12 @@ To execute the program we need a compiler. A compiler is a program that translat
 
 ##### Types of Compilers
 
-1. Native Compilers: Converts high-level code into machine code for the same system it runs on (GCC, Clang, MSVC)
-2. Cross Compilers: Generates code for a platform other than the one it is running on (ARM GCC, MinGW, XC16 Compiler).
-3. Just-In-Time (JIT) Compiler: Translates code at runtime for execution (Java HotSpot JVM, V8, LLVM JIT)
-4. Interpreting Compiler: Compiles and executes code line-by-line (Python interpreter, Ruby MRI, Perl Interpreter)
+1. Native Compilers: Convert high-level code into machine code for the same system it runs on (GCC, Clang, MSVC).
+2. Cross Compilers: Generate code for a platform other than the one it is running on (ARM GCC, MinGW, XC16 Compiler).
+3. Just-In-Time (JIT) Compilers: Translate code at runtime for execution (Java HotSpot JVM, V8, LLVM JIT).
+4. Interpreting Compilers: Compile and execute code line-by-line (Python, Ruby MRI, and Perl Interpreters).
 
-In our example we will use GCC (GNU Compiler Collection) that compiles C code and links it with the assembler code to create an executable. It ensures the C and assembly codes work together.
+In our project we use GCC (GNU Compiler Collection) that compiles C code (`Part2.c`) and links it with the assembler code (`Part2_Assembler.o`) to create an executable (`Part2`). GCC ensures the C and assembly codes work together.
 
 To run the program execute:
 
@@ -64,30 +64,30 @@ To run the program execute:
 yasm -f elf64 -g dwarf2 Part2_Assembler.asm
 ```
 
-1. `yasm`: Assembler used to translate the assembly code into object file.
+1. `yasm`: It is an assembler that translates assembly language code (`.asm`) into machine-readable object code (`.o`).
 2. `-f elf64`: Specifies the output format (Executable and Linkable Format for 64-bit).
 3. `-g dwarf2`: Include debugging information in DWARF2 format.
 4. `Part2_Assembler.asm`: The input assembly to be compiled.
 
 ![alt text](pics/pic1.png)
 
-This command compiles the assembly code into a 64-bit object file ready for linking (`Part2_Assembler.o`). Then execute:
+This command compiles the assembly code (`.asm`) into a 64-bit object file (`.o`) ready for linking. Then execute:
 
 ```
 gcc -no-pie -mincoming-stack-boundary=3 -g -o Part2 Part2_Assembler.o Part2.c
 ```
 
-1. `gcc`: GNU C Compiler used to compile and link the program
-2. `-no-pie`: Disables Position Independent Executable (PIE) format to ensure fixed memory addresses for easier debugging.
+1. `gcc`: GNU C Compiler used to compile and link the program.
+2. `-no-pie`: Disables `Position Independent Executable` (PIE) format to ensure `fixed memory addresses` for easier debugging.
 3. `-mincoming-stack-boundary=3`: Specifies the stack alignment to 8 bytes (2^3) to match the stack alignment used in the assembly code.
-4. `-g`: Includes debugging information
-5. `-o Part2`: Output executable name
-6. `Part2_Assembler.o`: Object file generated from the assembly code
-7. `Part2.c`: The C source file to compile and link with the assembly code.
+4. `-g`: Includes debugging information.
+5. `-o Part2`: Output executable name.
+6. `Part2_Assembler.o`: Object file generated from the assembly code.
+7. `Part2.c`: The C file to compile and link with the assembly code.
 
 ![alt text](pics/pic2.png)
 
-8. This command links the assembly object file (`Part2_Assembler.o`) and the C code (`Part2.c`) into a single executable (`Part2`) with debugging information. Execute the output file with `./Part2`
+8. This command links the assembly object file (`Part2_Assembler.o`) with the C code file (`Part2.c`) to generate an executable output file (`Part2`) with debugging information. Execute the output file with `./Part2`
 
 ![alt text](pics/pic3.png)
 
@@ -99,4 +99,4 @@ Keep playing until one of them wins!
 
 ![alt text](pics/pic5.png)
 
-🥳 Player 2 (circles) won! 🥳
+Congratulations! Player 2 (circles) won! 🥳
