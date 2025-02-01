@@ -2,7 +2,17 @@
 
 Database made with Node.js in AWS.
 
+### Explanation structure of the project
+
+1. `Index.js`: Main entry point of the Node.js application
+2. `models/product.models.js`: Contains the model for a product defining how it interacts with the database. `Models` encapsulate database-related logis ensuring changes to the database schema affect only the model file.
+3. `routes/product.route.js`: Defines the API routes for handling product requests. `Routes` are grouped in one place to define how HTTP requests are handled.
+4. `controllers/roduct.controller.js`: Contains the logis for handling incoming requests, managing data, and sending responses. `Controllers` separate the application logic reducing clutter in the routes.
+
 ### Node.js installation on Ubuntu
+
+Node.js is a JavasScript rntime environment that allows to run JavaScript code outside of browsers. It is often used to build backend servers and APIs because it is fast, lightweight and event driven. It is also well-suited for applications that require handling multiple simultaneous requests like web servers.
+In software development, separating code into different files and folders is a best practice known as modularization. It facilitates code organization (separating logic into different files like routes, controllers and models), reusability (each model can be used accross the project without duplicating code), team collaboration (different team members can work on specific parts of the project without conflict) and scalability (well structured projects are easier to extend).
 
 1. Download Nodejs from [here](https://nodejs.org/en)
 2. Go where the compressed file is located and do: `tar -xf node-v%(version)s-%(arch)s.tar.xz`
