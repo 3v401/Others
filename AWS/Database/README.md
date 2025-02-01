@@ -1,6 +1,8 @@
-### This post is under development
+## This post is under development
 
-Database made with Node.js in AWS.
+### Database made with Node.js in AWS.
+
+Note: This post is for someone who doesn't have knowledge of Node.js so I explained every possible concept. Future posts won't have explanation of concepts already explained here.
 
 ### Explanation structure of the project
 
