@@ -6,8 +6,8 @@ Database made with Node.js in AWS.
 
 1. `Index.js`: Main entry point of the Node.js application. It sets up the server and initializes middleware, routes, and database connections.
 2. `models/product.models.js`: Defines the product structure (schema) of the data (name, price, etc).
-3. `routes/product.route.js`: `Routes` define the URLs/endpoints that your application responds to and what happens when a user visits them. 
-4. `controllers/roduct.controller.js`: Implements the logic for each route, such as fetching products, creating a new product, or deleting a product. `Controllers` separate the application logic reducing clutter in the routes.
+3. `routes/product.route.js`: Defines the API endpoints (routes). `Routes` define the URLs/endpoints that your application responds to and what happens when a user visits them. 
+4. `controllers/roduct.controller.js`: Handles the business logic for each route, such as fetching products, creating a new product, or deleting a product. `Controllers` separate the application logic reducing clutter in the routes.
 
 ### Node.js installation on Ubuntu
 
