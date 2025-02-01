@@ -5,7 +5,7 @@ Database made with Node.js in AWS.
 ### Explanation structure of the project
 
 1. `Index.js`: Main entry point of the Node.js application. It sets up the server and initializes middleware, routes, and database connections.
-2. `models/product.models.js`: Contains the model for a product. Defines how it interacts with the database and defines the structure of a "product" entity, in the database. It specifies fields like name, price, description... `Models` encapsulate database-related logic ensuring changes to the database schema affect only the model file.
+2. `models/product.models.js`: Contains the model for the product. Defines the structure of the data (name, price, etc). `Models` encapsulate database-related logic ensuring changes to the database schema affect only the model file.
 3. `routes/product.route.js`: `Routes` define the URLs/endpoints that your application responds to and what happens when a user visits them. 
 4. `controllers/roduct.controller.js`: Implements the logic for each route, such as fetching products, creating a new product, or deleting a product. `Controllers` separate the application logic reducing clutter in the routes.
 
