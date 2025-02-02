@@ -40,3 +40,10 @@ npm -v
 ```
 mongodb+srv://<username>:<db_password>@cluster0.emyfy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 ```
+
+
+## AWS
+
+After downloading the key pair, find it: `ls -la | grep pem
+Grab the name and move it to: `mv CRU-Database-Nodejs.pem ~/.ssh`
+
