@@ -44,7 +44,8 @@ mongodb+srv://<username>:<db_password>@cluster0.emyfy.mongodb.net/?retryWrites=t
 
 ## AWS
 
-After downloading the key pair, find it: `ls -la | grep pem`
-
-Grab the name and move it to: `mv CRU-Database-Nodejs.pem ~/.ssh`
-
+1. After downloading the key pair, find it: `ls -la | grep pem`
+2. Grab the name and move it to: `mv CRU-Database-Nodejs.pem ~/.ssh`
+3. Move to: `cd ~/.ssh`
+4. Activate permissions: `chmod 400 "CRU-Database-Nodejs.pem"`
+5. Connect to the AWS instance by: `ssh -i "./CRU-Database-Nodejs.pem" ubuntu@ec2-13-49-66-254.eu-north-1.compute.amazonaws.com`
