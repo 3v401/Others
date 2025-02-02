@@ -34,10 +34,9 @@ npm -v
 ### Development of a CRU database with Node.js
 
 1. Initialize a new Node.js project: `npm init -y`
-2. Install MongoDB: `npm install mongodb`
-3. The following packages are needed: `node i express nodemon -D`
-4. To connect a MongoDB database to our Node.js backend an account is required.
-5. To connect to the MongoDB database run:
+2. Install mongoose, mongodb, express and nodemon: `npm install mongoose mongodb express nodemon -D`.
+3. To connect a MongoDB database to our Node.js backend an account is required.
+4. To connect to the MongoDB database run:
 ```
 mongodb+srv://<username>:<db_password>@cluster0.emyfy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 ```
