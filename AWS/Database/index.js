@@ -23,11 +23,6 @@ product.route.js
 */
 app.use("/api/products", productRoute);
 
-// Whenever we visit the root page of the site, we return:
-// app.get('/', (req, res) => {
-//    res.send("Hi from Server that connects to MongoDB. Not connected yet.");
-// });
-
 // Establish connection to MongoDB database (username and password not shared)
 mongoose
     .connect(
