@@ -44,7 +44,10 @@ mongodb+srv://<username>:<db_password>@cluster0.emyfy.mongodb.net/?retryWrites=t
 
 ## AWS
 
-1. After downloading the key pair, find it: `ls -la | grep pem`
+Set an EC2 instance in AWS. Set as image Ubuntu's most recent version, x86_64 architecture, free tier eligible instance type.
+To access the instance through ssh a key pair (login) is needed. For that, create your key pair and download it (Key pair type RSA and file format .pem). For network settings allow SSH traffic from `My IP`, HTTPS and HTTP traffic from the internet. Launch instance.
+
+1. After downloading the key pair, find it in your Downloads folder: `ls -la | grep pem`
 2. Grab the name and move it to: `mv CRU-Database-Nodejs.pem ~/.ssh`
 3. Move to: `cd ~/.ssh`
 4. Activate permissions: `chmod 400 "CRU-Database-Nodejs.pem"`
