@@ -1,4 +1,4 @@
-# Car Store (Toy example) Database in an AWS EC2 instance:
+# Car Store Database in an AWS EC2 instance:
 
 ### Technologies:
 
@@ -7,7 +7,7 @@
 3. Bash
 4. AWS
 
-Note: This post is for people who doesn't have knowledge of Node.js so I explained every possible concept. Future posts won't have explanation of concepts already explained here. Future posts will contain security measures in AWS for better understanding of the current process and not overfeeding the post.
+Note: This post is for people who doesn't have knowledge of Node.js so I explained every possible concept. Future posts won't have explanation of concepts already explained here. **Future posts will contain security measures in AWS for better understanding of the current process and not overfeeding the post.**
 
 ### Source code structure:
 
