@@ -52,3 +52,66 @@ To access the instance through ssh a key pair (login) is needed. For that, creat
 3. Move to: `cd ~/.ssh`
 4. Activate permissions: `chmod 400 "CRU-Database-Nodejs.pem"`
 5. Connect to the AWS instance by: `ssh -i "./CRU-Database-Nodejs.pem" ubuntu@ec2-<IP>.eu-north-1.compute.amazonaws.com`
+
+(pic9)
+
+6. Run the following command to update the OS: `sudo apt update && sudo apt upgrade`
+7. Download and execute the NodeSource setup script to configure the repository and install nodejs.
+
+```
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt-get install -y nodejs
+```
+
+(pic11)
+
+8. After Nodejs is installed, open a new terminal locally where the Nodejs project is downloaded, run the following code:
+
+```
+rsync -avz --exclude 'node_modules' --exclude '.git' --excllude 'POST_nodejs.sh' --exclude '.env' \
+-e "ssh -i ~/.ssh/CRU-Database-Nodejs.pem" \
+. ubuntu@<INSTANCE_ADDRESS>:~/app
+```
+
+This command is better than just copying (scp) the files from the local path to the AWS instance, it sincronizes the files. Only copies the files that were changed or not existant.
+
+(pic13)
+
+Return to your AWS ssh connection and check for the files:
+
+(pic14)
+
+Now that you have all the files, install all the libraries. Move to `~/app` and run: `npm install`. Run the server by `npm run serve`
+
+(pic16)
+
+Before connecting through the Browser to check the content of the MongoDB database inbound connections must be allowed. For that enter: EC2/Security Groups/WebServerDatabase (Security Group Name)/Entry Rules (Edit entry rules).
+Here traffic through port 3000 is needed. So  allow traffic through this port from your IP:
+
+(pic17)
+
+After the inbound rule is edited. Access the EC2 instance, networks, and find the public IPv4  open the browser and type: `<Public_IPv4:3000/api/products`.
+
+(pic18)
+
+Congratulations! You got access to the MongoDB database through AWS!
+
+### Playing with the Database (example: Car store database)
+
+A bash script was created to play with the database. For that locally execute it. You can create, show (one or all), update or delete items.
+
+1. Create items: Create two cars in the database (you have 2 cars)
+
+(pic19)
+(pic20)
+
+2. Update product: Update the Tesla Model 3 (it got returned fur to some damage)
+
+(pic21)
+(pic22)
+
+3. Delete product: You don't have Tesla Model 3 anymore
+
+(pic23)
+(pic24)
+
+Congratulations! 🥳 You played with a MongoDB in an AWS instance 😃👍🏽
