@@ -11,6 +11,9 @@ Here I’ll be uploading LeetCode exercises and solving each one using both brut
 ### Writing Optimal Code: A Cybersecurity Perspective
 When developing software in the field of cybersecurity, it's important to think like a nation-state hacker. The goal isn't just to write functional code — it's to write optimal code. That means choosing minimal-complexity algorithms that use the least possible resources.
 
+#### Why Optimal Code Matters
+Whether you're attacking or defending, optimal code isn’t just a best practice — it’s a necessity. Even Dictionary Attacks (read team) or Intrusion Detection Systems (blue team)  should be optimized using heuristics or smarter algorithms.
+
 #### Offensive Security (Red Team)
 In offensive security, you might find yourself writing exploits or deploying backdoors. In these situations, your code must be stealthy — it needs to leave minimal traces. The more CPU, memory, or network bandwidth your tools consume, the more likely they are to trigger monitoring systems. Once flagged, defenders can begin analysis, detect your presence, and remove your access. That’s why red team tools must be lean, fast, and efficient.
 
@@ -21,5 +24,6 @@ You need to **"be like water, my friend"** — flowing silently through cracks i
 #### Defensive Security (Blue Team)
 On the defensive side, you're responsible for monitoring and protecting infrastructure — ideally with minimal spenditure. Efficient code matters because every unnecessary cycle or byte costs money and affects system performance. You want lightweight, reliable tools that can scale across systems without breaking the budget.
 
-#### Why Optimal Code Matters
-Whether you're attacking or defending, optimal code isn’t just a best practice — it’s a necessity. Even Dictionary Attacks (read team) or Intrusion Detection Systems (blue team)  should be optimized using heuristics or smarter algorithms.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+So, after this being said, let's begin with the coding! 
