@@ -1,6 +1,6 @@
 # Leetcode exercises:
 
-*Node: This post is a never-ending project. Code exercises will be added as time goes by.
+*Note: This post is a never-ending project. Code exercises will be added as time goes by.
 
 ## Some comments:
 What is this repository about?
