@@ -6,7 +6,7 @@
 What is this repository about?
 
 
-Here I’ll be uploading LeetCode exercises and solving each one using both brute-force and optimized approaches — or only the one that I know at that moment. The goal is to demonstrate how to improve code efficiency while gaining experience at coding — a skill that’s essential for cybersecurity practitioners on both sides of the field (red and blue teams).
+Here I’ll be uploading LeetCode exercises and solving each one using both brute-force and optimized approaches — or the only one that I know at that moment. The goal is to demonstrate how to improve code efficiency while gaining experience at coding — a skill that’s essential for cybersecurity practitioners on both sides of the field (red and blue teams).
 
 ### Writing Optimal Code: A Cybersecurity Perspective
 When developing software in the field of cybersecurity, it's important to think like a nation-state hacker. The goal isn't just to write functional code — it's to write optimal code. That means choosing minimal-complexity algorithms that use the least possible resources.
